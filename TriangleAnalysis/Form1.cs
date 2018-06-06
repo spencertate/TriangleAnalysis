@@ -17,12 +17,13 @@ namespace TriangleAnalysis
         public Form1()
         {
             InitializeComponent();
+            UpdateOutput();
         }
 
         private void UpdateOutput()
         {
             //Set up message output
-            string message = "Output:";
+            string message = "";
 
             //Check for initialized inputs
             if (aInt == -1 || bInt == -1 || cInt == -1)
@@ -63,7 +64,7 @@ namespace TriangleAnalysis
             }
 
             //If not any of the three above, type is regular
-            if(message == "Output:\nInputs make a valid triangle of type:")
+            if(message == "\nInputs make a valid triangle of type:")
             {
                 message += "\n  Regular Triangle";
             }

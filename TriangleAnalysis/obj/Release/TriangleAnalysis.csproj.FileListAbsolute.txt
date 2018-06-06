@@ -7,3 +7,4 @@ c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\
 c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\TriangleAnalysis.csproj.CoreCompileInputs.cache
 c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\TriangleAnalysis.exe
 c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\TriangleAnalysis.pdb
+C:\Users\TheFarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\TriangleAnalysis.csprojAssemblyReference.cache
