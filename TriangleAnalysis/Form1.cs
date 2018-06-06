@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TriangleAnalysis
 {
     public partial class Form1 : Form
     {
+        //Data from the text boxes
         private int aInt = -1, bInt = -1, cInt = -1;
 
         public Form1()
@@ -22,27 +17,22 @@ namespace TriangleAnalysis
 
         private void UpdateOutput()
         {
-            //Set up message output
-            string message = "";
-
             //Check for initialized inputs
             if (aInt == -1 || bInt == -1 || cInt == -1)
             {
-                message += "\nInvalid or nonexistant data.";
-                txtOutput.Text = message;
+                txtOutput.Text = "\nInvalid or nonexistant data.";
                 return;
             }
             
             //Triangle shape validation
             if(!((aInt + bInt > cInt) && (bInt + cInt > aInt) && (cInt + aInt > bInt)))
             {
-                message += "\nGiven sides do not make a triangle.";
-                txtOutput.Text = message;
+                txtOutput.Text = "\nGiven sides do not make a triangle.";
                 return;
             }
 
             //Begin valid triangle report
-            message += "\nInputs make a valid triangle of type:";
+            string message = "\nInputs make a valid triangle of type:";
 
             //Test for an equilateral triangle
             if(aInt == bInt && bInt == cInt)
