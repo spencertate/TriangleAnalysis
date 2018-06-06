@@ -12,108 +12,101 @@ namespace TriangleAnalysis
 {
     public partial class Form1 : Form
     {
+        private int aInt = -1, bInt = -1, cInt = -1;
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void UpdateOutput()
         {
-            //Begin text preparation
-            String message = "";
+            //Set up message output
+            string message = "Output:";
 
-            //Pull data from text boxes
-            string aRaw = aSideInput.Text;
-            string bRaw = bSideInput.Text;
-            string cRaw = cSideInput.Text;
-
-            int aInt = 0, bInt = 0, cInt = 0;
-
-            bool valid = true;
-            
-            //Side A input validation
-            if(aRaw.All(c => char.IsDigit(c)) && aRaw != "")
+            //Check for initialized inputs
+            if (aInt == -1 || bInt == -1 || cInt == -1)
             {
-                aInt = Convert.ToInt32(aRaw);
-            }
-            else
-            {
-                message += "\nEnsure Side A is a valid integer.";
-                valid = false;
-            }
-
-            //Side B input validation
-            if (bRaw.All(c => char.IsDigit(c)) && bRaw != "")
-            {
-                bInt = Convert.ToInt32(bRaw);
-            }
-            else
-            {
-                message += "\nEnsure Side B is a valid integer.";
-                valid = false;
-            }
-
-            //Side C input validation
-            if (cRaw.All(c => char.IsDigit(c)) && cRaw != "")
-            {
-                cInt = Convert.ToInt32(cRaw);
-            }
-            else
-            {
-                message += "\nEnsure Side C is a valid integer.";
-                valid = false;
+                message += "\nInvalid or nonexistant data.";
+                txtOutput.Text = message;
+                return;
             }
             
             //Triangle shape validation
-            if(valid && !((aInt + bInt > cInt) && (bInt + cInt > aInt) && (cInt + aInt > bInt)))
+            if(!((aInt + bInt > cInt) && (bInt + cInt > aInt) && (cInt + aInt > bInt)))
             {
-                message += "\nGiven sides do not make a triangle." + aInt + " " + bInt + " " + cInt;
-                valid = false;
-            }
-
-            //If not valid, create message box showing errors
-            if(!valid)
-            {
-                MessageBox.Show("Invalid Triangle: " + message);
+                message += "\nGiven sides do not make a triangle.";
+                txtOutput.Text = message;
                 return;
             }
 
             //Begin valid triangle report
-            message = "Inputs make a valid triangle of type:";
+            message += "\nInputs make a valid triangle of type:";
 
             //Test for an equilateral triangle
             if(aInt == bInt && bInt == cInt)
             {
-                message += "\nEquilateral Triangle";
+                message += "\n  Equilateral Triangle";
             }
             else
             {
                 //Test for an isosceles triangle
                 if(aInt == bInt || bInt == cInt || cInt == aInt)
                 {
-                    message += "\nIsosceles Triangle";
+                    message += "\n  Isosceles Triangle";
                 }
                 //Test for a right triangle
                 if(isRight(aInt, bInt, cInt) || isRight(bInt, cInt, aInt) || isRight(cInt, aInt, bInt))
                 {
-                    message += "\nRight Triangle";
+                    message += "\n  Right Triangle";
                 }
             }
 
             //If not any of the three above, type is regular
-            if(message == "Inputs make a valid triangle of type:")
+            if(message == "Output:\nInputs make a valid triangle of type:")
             {
-                message += "\nRegular Triangle";
+                message += "\n  Regular Triangle";
             }
 
             //Show output
-            MessageBox.Show(message);
+            txtOutput.Text = message;
         }
 
         //Encapsulation of Pythagorean Theorem
         private bool isRight(int a, int b, int c)
         {
             return ((a * a) + (b * b)) == (c * c);
+        }
+        
+        //Update the length of side a
+        private void aSideInput_TextChanged(object sender, EventArgs e)
+        {
+            aInt = ValidateInput(aSideInput.Text);
+            UpdateOutput();
+        }
+
+        //Update the length of side b
+        private void bSideInput_TextChanged(object sender, EventArgs e)
+        {
+            bInt = ValidateInput(bSideInput.Text);
+            UpdateOutput();
+        }
+
+        //Update the length of side c
+        private void cSideInput_TextChanged(object sender, EventArgs e)
+        {
+            cInt = ValidateInput(cSideInput.Text);
+            UpdateOutput();
+        }
+
+        //Check if input string is a valid number
+        private int ValidateInput(string inp)
+        {
+            if ((inp.All(c => char.IsDigit(c)) && inp != ""))
+            {
+               return Convert.ToInt32(inp);
+            }
+            return -1;     
         }
     }
 }
