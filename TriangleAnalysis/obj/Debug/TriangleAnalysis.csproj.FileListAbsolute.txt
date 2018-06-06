@@ -1,0 +1,10 @@
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\bin\Debug\TriangleAnalysis.exe.config
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\bin\Debug\TriangleAnalysis.exe
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\bin\Debug\TriangleAnalysis.pdb
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Debug\TriangleAnalysis.csprojAssemblyReference.cache
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Debug\TriangleAnalysis.Properties.Resources.resources
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Debug\TriangleAnalysis.csproj.GenerateResource.cache
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Debug\TriangleAnalysis.csproj.CoreCompileInputs.cache
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Debug\TriangleAnalysis.exe
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Debug\TriangleAnalysis.pdb
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Debug\TriangleAnalysis.Form1.resources

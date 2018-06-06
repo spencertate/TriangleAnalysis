@@ -1,0 +1,9 @@
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\bin\Release\TriangleAnalysis.exe.config
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\bin\Release\TriangleAnalysis.exe
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\bin\Release\TriangleAnalysis.pdb
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\TriangleAnalysis.Form1.resources
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\TriangleAnalysis.Properties.Resources.resources
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\TriangleAnalysis.csproj.GenerateResource.cache
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\TriangleAnalysis.csproj.CoreCompileInputs.cache
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\TriangleAnalysis.exe
+c:\users\thefarfarer\source\repos\TriangleAnalysis\TriangleAnalysis\obj\Release\TriangleAnalysis.pdb
